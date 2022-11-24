@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const MenuItems = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     return (
         <>
@@ -14,7 +14,7 @@ const MenuItems = () => {
                 user?.email ?
                     <>
                         <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/my-reviews'>My Reviews</Link></li>
-                        <li><button className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/'>Log Out</Link></button></li>
+                        <li><button onClick={logOut} className='btn bg-primary rounded-lg text-white font-semibold mx-2'><Link to='/'>Log Out</Link></button></li>
                     </>
                     :
                     <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/login'>Login</Link></li>
