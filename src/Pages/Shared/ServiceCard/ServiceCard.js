@@ -20,7 +20,7 @@ const ServiceCard = ({ service }) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{category}</h2>
-                <div className="badge badge-secondary">NEW</div>
+                <div className="badge badge-secondary">Overview</div>
                 <p className='text-lg font-semibold'><FontAwesomeIcon icon={faBed} /> Bed: {details[0].bed} <br /><FontAwesomeIcon icon={faBathtub} /> Bath: {details[0].bath}</p>
                 <p className='text-lg font-semibold'><FontAwesomeIcon icon={faDollar} /> Price: ${price}</p>
                 <p className='text-lg font-semibold'><FontAwesomeIcon icon={faMapMarkerAlt} /> Location: {location}</p>

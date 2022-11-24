@@ -5,7 +5,7 @@ import { PhotoSlider } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
 import useTitle from '../../../hooks/useTitle';
 
-const Details = () => {
+const ServiceDetails = () => {
     useTitle('Details');
     const { category, details, img, location, owner, price, rating } = useLoaderData();
     const [visible, setVisible] = useState(false);
@@ -64,4 +64,4 @@ const Details = () => {
     );
 };
 
-export default Details;
+export default ServiceDetails;

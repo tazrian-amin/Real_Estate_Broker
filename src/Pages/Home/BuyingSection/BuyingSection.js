@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../../Shared/ServiceCard/ServiceCard';
 
-const ServiceOverview = () => {
+const BuyingSection = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
@@ -29,4 +29,4 @@ const ServiceOverview = () => {
     );
 };
 
-export default ServiceOverview;
+export default BuyingSection;

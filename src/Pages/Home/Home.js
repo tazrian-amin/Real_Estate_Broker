@@ -3,14 +3,14 @@ import useTitle from '../../hooks/useTitle';
 import Banner from './Banner/Banner';
 import ClientsReview from './ClientsReview/ClientsReview';
 import SellingSection from './SellingSection/SellingSection';
-import ServiceOverview from './ServiceOverview/ServiceOverview';
+import BuyingSection from './BuyingSection/BuyingSection';
 
 const Home = () => {
     useTitle('Home');
     return (
         <div>
             <Banner></Banner>
-            <ServiceOverview></ServiceOverview>
+            <BuyingSection></BuyingSection>
             <SellingSection></SellingSection>
             <ClientsReview></ClientsReview>
         </div>
