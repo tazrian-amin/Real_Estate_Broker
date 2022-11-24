@@ -7,17 +7,17 @@ const MenuItems = () => {
 
     return (
         <>
-            <li className='btn bg-primary-focus border-2 border-black rounded-lg font-semibold mx-2'><Link to='/'>Home</Link></li>
-            <li className='btn bg-primary-focus border-2 border-black rounded-lg font-semibold mx-2'><Link to='/buy'>Buy House</Link></li>
-            <li className='btn bg-primary-focus border-2 border-black rounded-lg font-semibold mx-2'><Link to='/sell'>Sell House</Link></li>
+            <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/'>Home</Link></li>
+            <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/buy'>Buy House</Link></li>
+            <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/sell'>Sell House</Link></li>
             {
                 user?.email ?
                     <>
-                        <li className='btn bg-primary-focus border-2 border-black rounded-lg font-semibold mx-2'><Link to='/reviews'>My Reviews</Link></li>
-                        <li><button className='btn bg-primary-focus border-2 border-black rounded-lg font-semibold mx-2'><Link to='/'>Log Out</Link></button></li>
+                        <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/reviews'>My Reviews</Link></li>
+                        <li><button className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/'>Log Out</Link></button></li>
                     </>
                     :
-                    <li className='btn bg-primary-focus border-2 border-black rounded-lg font-semibold mx-2'><Link to='/login'>Login</Link></li>
+                    <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/login'>Login</Link></li>
             }
         </>
     );
