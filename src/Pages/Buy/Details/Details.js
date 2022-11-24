@@ -7,7 +7,7 @@ import useTitle from '../../../hooks/useTitle';
 
 const Details = () => {
     useTitle('Details');
-    const { category, details, img, location, owner, price, rating, _id } = useLoaderData();
+    const { category, details, img, location, owner, price, rating } = useLoaderData();
     const [visible, setVisible] = useState(false);
     const [index, setIndex] = useState(0);
     console.log(owner)
@@ -36,7 +36,7 @@ const Details = () => {
 
                 <div className="flex flex-col mt-8 w-full border-opacity-50">
                     <div className="grid card py-4 bg-base-200 rounded-box place-items-center">
-                        <h3 className='text-2xl font-bold pb-2'>{category} Details</h3>
+                        <h3 className='text-3xl font-bold pb-2'>{category} Details</h3>
                         <p className='text-lg font-semibold'><FontAwesomeIcon icon={faBed} /> Bed: {details[0].bed}</p>
                         <p className='text-lg font-semibold'><FontAwesomeIcon icon={faBathtub} /> Bath: {details[0].bath}</p>
                         <p className='text-lg font-semibold'><FontAwesomeIcon icon={faPlusCircle} /> Facility: {details[0].facility}</p>
@@ -47,7 +47,7 @@ const Details = () => {
                     </div>
                     <div className="divider my-10"><button className='btn btn-primary w-100 mx-auto' onClick={() => setVisible(true)} primary>View Gallery</button></div>
                     <div className="grid card py-4 bg-base-200 rounded-box place-items-center">
-                        <h3 className='text-2xl font-bold'>Owner Details</h3>
+                        <h3 className='text-3xl font-bold'>Owner Details</h3>
                         <img className="mask mask-decagon w-32" src={owner[0].photo} alt="owner" />
                         <p className='text-lg font-semibold'><FontAwesomeIcon icon={faUserAlt} /> Name: {owner[0].name}</p>
                         <p className='text-lg font-semibold'><FontAwesomeIcon icon={faPhone} /> Phone: {owner[0].phone}</p>

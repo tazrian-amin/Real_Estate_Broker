@@ -24,6 +24,11 @@ const router = createBrowserRouter([
                 element: <Buy></Buy>
             },
             {
+                path: '/buy/:id',
+                element: <Details></Details>,
+                loader: ({ params }) => fetch(`http://localhost:5000/buy/${params.id}`)
+            },
+            {
                 path: '/sell',
                 element: <Sell></Sell>
             },
@@ -46,11 +51,6 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact></Contact>
-            },
-            {
-                path: '/buy/:id',
-                element: <Details></Details>,
-                loader: ({ params }) => fetch(`http://localhost:5000/buy/${params.id}`)
             }
         ]
     }
