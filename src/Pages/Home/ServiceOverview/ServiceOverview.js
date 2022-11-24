@@ -12,7 +12,8 @@ const ServiceOverview = () => {
     }, [])
 
     return (
-        <div className='my-20'>
+        <div className='bg-base-200 w-4/5 mx-auto rounded-md my-10'>
+            <h1 className="text-5xl font-bold text-center py-5">Purchase a Home!</h1>
             <div className='grid grid-cols-1 lg:grid-cols-3'>
                 {
                     services.map(service => <ServiceCard
@@ -21,8 +22,8 @@ const ServiceOverview = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <div className='mt-10 flex justify-center'>
-                <Link to='/buy' className="btn btn-primary">View All</Link>
+            <div className='flex justify-center'>
+                <Link to='/buy' className="btn btn-primary my-10">View All</Link>
             </div>
         </div>
     );
