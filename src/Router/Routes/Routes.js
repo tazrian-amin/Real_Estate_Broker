@@ -8,6 +8,7 @@ import Contact from "../../Pages/Contact/Contact";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
+import MyReviews from "../../Pages/MyReviews/MyReviews";
 import Sell from "../../Pages/Sell/Sell";
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: '/sell',
                 element: <Sell></Sell>
+            },
+            {
+                path: '/my-reviews',
+                element: <MyReviews></MyReviews>
             },
             {
                 path: '/login',

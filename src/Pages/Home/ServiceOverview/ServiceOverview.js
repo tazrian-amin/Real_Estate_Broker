@@ -12,7 +12,7 @@ const ServiceOverview = () => {
     }, [])
 
     return (
-        <div className='bg-base-200 w-4/5 mx-auto rounded-md my-10'>
+        <div className='bg-base-200 w-4/5 mx-auto rounded-md border-2 border-neutral my-10'>
             <h1 className="text-5xl font-bold text-center py-5">Purchase a Home!</h1>
             <div className='grid grid-cols-1 lg:grid-cols-3'>
                 {

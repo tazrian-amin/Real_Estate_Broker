@@ -13,7 +13,7 @@ const MenuItems = () => {
             {
                 user?.email ?
                     <>
-                        <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/reviews'>My Reviews</Link></li>
+                        <li className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/my-reviews'>My Reviews</Link></li>
                         <li><button className='btn bg-primary rounded-lg font-semibold mx-2'><Link to='/'>Log Out</Link></button></li>
                     </>
                     :

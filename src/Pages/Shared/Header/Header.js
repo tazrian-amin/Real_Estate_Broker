@@ -5,7 +5,7 @@ import MenuItems from './MenuItems';
 
 const Header = () => {
     return (
-        <div className="navbar bg-base-200 h-20">
+        <div className="navbar bg-base-200 py-5 border-b-2 border-neutral">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn bg-primary lg:hidden">
