@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import { showToastMessage } from '../../utilities/utilities';
@@ -67,7 +68,7 @@ const Sell = () => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-                    showToastMessage('Property added successfully!')
+                    showToastMessage('Property added successfully!');
                 }
                 form.reset();
                 navigate('/buy');
@@ -78,26 +79,26 @@ const Sell = () => {
         <div>
             <h1 className="text-5xl font-bold text-center py-5">Add Your Property</h1>
             <p className='text-center text-lg font-semibold mb-5'>Fill up the form to add your property. <br /> Reach millions of buyers <br />With a single post!</p>
-
-            <form onSubmit={handleSellingHouse} className='w-4/5 mx-auto rounded-md border-2 border-neutral my-10 p-10'>
+            <ToastContainer></ToastContainer>
+            <form onSubmit={handleSellingHouse} className='bg-base-200 w-full md:w-4/5 px-5 mx-auto rounded-none md:rounded-md border-y-2 md:border-2 border-neutral my-10 py-10'>
                 <h1 className="text-5xl font-bold text-center pb-5">Form</h1>
-                <div className='flex flex-col md:flex-row items-center justify-evenly my-5'>
+                <div className='flex flex-col lg:flex-row items-center justify-evenly my-5'>
                     <div className="form-control btn btn-primary w-full lg:w-1/5">
                         <label className="label cursor-pointer">
                             <span className="label-text text-white mr-2">Apartment</span>
-                            <input type="radio" name="category" value={'Apartment'} className="radio checked:bg-success" required />
+                            <input type="radio" name="category" value={'Apartment'} className="radio bg-white checked:bg-success" required />
                         </label>
                     </div>
                     <div className="form-control btn btn-primary w-full lg:w-1/5 my-4">
                         <label className="label cursor-pointer">
                             <span className="label-text text-white mr-2">House</span>
-                            <input type="radio" name="category" value={'House'} className="radio checked:bg-success" required />
+                            <input type="radio" name="category" value={'House'} className="radio bg-white checked:bg-success" required />
                         </label>
                     </div>
                     <div className="form-control btn btn-primary w-full lg:w-1/5">
                         <label className="label cursor-pointer">
                             <span className="label-text text-white mr-2">Condominium</span>
-                            <input type="radio" name="category" value={'Condominium'} className="radio checked:bg-success" required />
+                            <input type="radio" name="category" value={'Condominium'} className="radio bg-white checked:bg-success" required />
                         </label>
                     </div>
                 </div>

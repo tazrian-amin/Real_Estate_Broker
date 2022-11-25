@@ -32,18 +32,19 @@ const Register = () => {
                 .then(res => {
                     const user = res.user;
                     setAuthToken(user);
-                    showToastMessage('User Registered Successfully!');
+                    alert('User Registered Successfully!');
                     form.reset();
                     navigate(from, { replace: true });
                 })
                 .then(err => {
                     console.error(err);
+                    showToastMessage(err.message);
                 })
         }
     }
     return (
-        <div className="hero my-20 w-4/5 mx-auto border-2 border-neutral rounded-md">
-            <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
+        <div className="hero w-full md:w-4/5 mx-auto rounded-none md:rounded-md border-y-2 md:border-2 border-neutral my-10 pb-10 md:pb-0">
+            <div className="hero-content grid md:gap-5 lg:gap-20 md:grid-cols-2 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
                     <img className='w-full' src="https://images.unsplash.com/photo-1494475673543-6a6a27143fc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
                 </div>

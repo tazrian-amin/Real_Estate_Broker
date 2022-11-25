@@ -48,7 +48,7 @@ const ServiceDetails = () => {
                     <div className="divider my-10"><button className='btn btn-primary w-100 mx-auto' onClick={() => setVisible(true)} primary>View Gallery</button></div>
                     <div className="grid card p-4 bg-base-200 rounded-box place-items-center">
                         <h3 className='text-3xl font-bold'>Owner Details</h3>
-                        <img className="mask mask-decagon w-32" src={owner[0].photo} alt="owner" />
+                        <img className="mask mask-decagon w-32" src={owner[0].photo || "https://img.myloview.com/stickers/user-icon-vector-people-icon-profile-vector-icon-person-illustration-business-user-icon-users-group-symbol-male-user-symbol-700-223068886.jpg"} alt="owner" />
                         <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faUserAlt} /> Name: {owner[0].name}</p>
                         <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faPhone} /> Phone: {owner[0].phone}</p>
                         <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faEnvelope} /> Email: {owner[0].email}</p>

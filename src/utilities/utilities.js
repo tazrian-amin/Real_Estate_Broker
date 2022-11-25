@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // common function to show toast message 
 const showToastMessage = (message) => {
-    toast.success(message, {
+    return toast.success(message, {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
