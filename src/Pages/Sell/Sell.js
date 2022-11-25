@@ -77,22 +77,22 @@ const Sell = () => {
             <form onSubmit={handleSellingHouse} className='w-4/5 mx-auto rounded-md border-2 border-neutral my-10 p-10'>
                 <h1 className="text-5xl font-bold text-center pb-5">Form</h1>
                 <div className='flex flex-col md:flex-row items-center justify-evenly my-5'>
-                    <div className="form-control btn btn-outline btn-success w-full lg:w-1/5">
+                    <div className="form-control btn btn-primary w-full lg:w-1/5">
                         <label className="label cursor-pointer">
-                            <span className="label-text mr-2">Apartment</span>
-                            <input type="radio" name="category" value={'Apartment'} className="radio checked:bg-primary" required />
+                            <span className="label-text text-white mr-2">Apartment</span>
+                            <input type="radio" name="category" value={'Apartment'} className="radio checked:bg-success" required />
                         </label>
                     </div>
-                    <div className="form-control btn btn-outline btn-success w-full lg:w-1/5 my-4">
+                    <div className="form-control btn btn-primary w-full lg:w-1/5 my-4">
                         <label className="label cursor-pointer">
-                            <span className="label-text mr-2">House</span>
-                            <input type="radio" name="category" value={'House'} className="radio checked:bg-primary" required />
+                            <span className="label-text text-white mr-2">House</span>
+                            <input type="radio" name="category" value={'House'} className="radio checked:bg-success" required />
                         </label>
                     </div>
-                    <div className="form-control btn btn-outline btn-success w-full lg:w-1/5">
+                    <div className="form-control btn btn-primary w-full lg:w-1/5">
                         <label className="label cursor-pointer">
-                            <span className="label-text mr-2">Condominium</span>
-                            <input type="radio" name="category" value={'Condominium'} className="radio checked:bg-primary" required />
+                            <span className="label-text text-white mr-2">Condominium</span>
+                            <input type="radio" name="category" value={'Condominium'} className="radio checked:bg-success" required />
                         </label>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ const Sell = () => {
                         <input name='price' type="number" placeholder="Price in USD" className="input input-bordered w-full" required />
                     </label>
                 </div>
-                <input className='btn btn-primary my-2' type="submit" value="Add Property" />
+                <input className='btn btn-primary my-2 w-full' type="submit" value="Add Property" />
             </form>
         </div>
     );
