@@ -21,8 +21,11 @@ const Sell = () => {
         const bath = form.bath.value;
         const area = form.area.value;
         const facility = form.facility.value || 'No Additional Facility';
-        const image = form.image.value;
+        const img1 = form.image.value;
         const price = form.price.value;
+        const img2 = 'https://images.unsplash.com/photo-1498409505433-aff66f7ba9e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=730&q=80';
+        const img3 = 'https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=913&q=80';
+        const images = { img1, img2, img3 };
 
         const addToBuy = {
             category,
@@ -32,10 +35,12 @@ const Sell = () => {
                     bath,
                     bed,
                     facility,
-                    img1: image,
+                    img1: images.img1,
+                    img2: images.img2,
+                    img3: images.img3
                 }
             ],
-            img: image,
+            img: images.img1,
             location,
             owner: [
                 {
