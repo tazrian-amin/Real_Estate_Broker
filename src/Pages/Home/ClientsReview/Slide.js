@@ -4,7 +4,6 @@ import React from 'react';
 
 const Slide = ({ slide }) => {
     const { client, id, prev, next } = slide;
-    console.log(client);
 
     return (
         <div id={`slide${id}`} className="carousel-item relative w-full">

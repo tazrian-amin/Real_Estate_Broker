@@ -56,7 +56,7 @@ const ServiceDetails = () => {
                 </div>
                 <div className="card-body">
                     <div className="card-actions justify-center">
-                        <Link to={`/myReview`} className="btn btn-primary">Add a Review</Link>
+                        <Link to={`/my-reviews`} className="btn btn-primary">Add a Review</Link>
                     </div>
                 </div>
             </div>
