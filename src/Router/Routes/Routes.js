@@ -8,6 +8,7 @@ import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
 import Register from "../../Pages/Login/Register/Register";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
+import NotFound from "../../Pages/NotFound/NotFound";
 import Sell from "../../Pages/Sell/Sell";
 import ServiceDetails from "../../Pages/Shared/ServiceDetails/ServiceDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
                 element: <Contact></Contact>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <NotFound></NotFound>
     }
 ])
 

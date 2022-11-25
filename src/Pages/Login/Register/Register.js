@@ -38,7 +38,7 @@ const Register = () => {
                 })
                 .then(err => {
                     console.error(err);
-                    showToastMessage(err.message);
+                    showToastMessage(err?.message);
                 })
         }
     }
