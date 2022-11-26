@@ -7,8 +7,8 @@ const Slide = ({ slide }) => {
 
     return (
         <div id={`slide${id}`} className="carousel-item relative w-full">
-            <div className="card lg:card-side">
-                <figure><img src={client?.photo} alt="client" className='w-full' /></figure>
+            <div className="card md:card-side">
+                <img className="mask mask-decagon w-32 ml-5" src={client?.photo} alt="client" />
                 <div className="card-body">
                     <h2 className="card-title">{client?.name}</h2>
                     <div className="rating">

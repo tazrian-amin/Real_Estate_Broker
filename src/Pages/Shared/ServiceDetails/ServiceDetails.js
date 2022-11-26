@@ -132,7 +132,7 @@ const ServiceDetails = () => {
                         </>
                 }
 
-
+                {/* Modal Button */}
                 {
                     user?.email ?
                         <div className="card-actions justify-center mt-10">
@@ -143,10 +143,6 @@ const ServiceDetails = () => {
                             <p>Want to add your review? Please <Link to='/login' className='text-primary font-bold underline'>Login</Link></p>
                         </div>
                 }
-
-                {/* <div className="card-actions justify-center mt-10">
-                    <label htmlFor="my-modal" className="btn btn-primary">Add a Review</label>
-                </div> */}
             </div>
 
             {/* Modal Body */}
