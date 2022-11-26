@@ -1,13 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
-import ReviewRow from '../Shared/ReviewRow/ReviewRow';
+import { showToastMessage } from '../../utilities/utilities';
+import ReviewRow from './ReviewRow/ReviewRow';
 
 const MyReviews = () => {
 
     useTitle('My Reviews');
     const { user, logOut } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
+
     useEffect(() => {
         fetch(`http://localhost:5000/my-reviews?email=${user?.email}`, {
             headers: {
@@ -22,6 +25,30 @@ const MyReviews = () => {
             })
             .then(data => setReviews(data))
     }, [user?.email, logOut])
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure you want to delete this review?');
+        if (proceed) {
+            fetch(`http://localhost:5000/reviews/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('user-access-token')}`
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.deletedCount > 0) {
+                        showToastMessage('Review deleted successfully!');
+                        const remainingReviews = reviews.filter(review => review._id !== id);
+                        setReviews(remainingReviews);
+                    }
+                    else {
+                        showToastMessage('Could not delete!');
+                    }
+                })
+        }
+    }
 
     return (
         <>
@@ -53,6 +80,7 @@ const MyReviews = () => {
                                         reviews.map(review => <ReviewRow
                                             key={review._id}
                                             review={review}
+                                            handleDelete={handleDelete}
                                         ></ReviewRow>)
                                     }
                                 </tbody>
@@ -61,6 +89,7 @@ const MyReviews = () => {
                         </div>
                     </>
             }
+            <ToastContainer />
         </>
     );
 };

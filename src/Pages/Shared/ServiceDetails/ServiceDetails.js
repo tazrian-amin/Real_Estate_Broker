@@ -12,7 +12,6 @@ const ServiceDetails = () => {
     useTitle('Details');
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
-    console.log(user);
     const { category, details, img, location, owner, price, rating } = useLoaderData();
     const [visible, setVisible] = useState(false);
     const [index, setIndex] = useState(0);
@@ -29,7 +28,7 @@ const ServiceDetails = () => {
         const form = event.target;
         const comment = form.comment.value;
         const time = new Date();
-        const name = user?.displayName || 'Anonymous';
+        const name = form.name.value;
         const email = user?.email;
         const photo = user?.photoURL || 'https://img.myloview.com/stickers/user-icon-vector-people-icon-profile-vector-icon-person-illustration-business-user-icon-users-group-symbol-male-user-symbol-700-223068886.jpg';
         const rating = form.rating.value;
@@ -174,6 +173,11 @@ const ServiceDetails = () => {
                                 <option>2</option>
                                 <option>1</option>
                             </select>
+                        </label>
+
+                        <label className="input-group input-group-vertical my-5">
+                            <span>Name</span>
+                            <input name='name' type="text" placeholder="Full Name" className="input input-bordered w-full" required />
                         </label>
 
                         <textarea name='comment' required className="textarea textarea-bordered w-full" placeholder="Write comment..."></textarea>
