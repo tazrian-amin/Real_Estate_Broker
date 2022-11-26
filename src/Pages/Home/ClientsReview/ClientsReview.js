@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Spinner from '../../../utilities/Spinner';
 import Slide from './Slide';
 
@@ -8,7 +7,7 @@ const ClientsReview = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('http://localhost:5000/overview-reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
@@ -48,19 +47,14 @@ const ClientsReview = () => {
                 reviews.length === 0 ?
                     <Spinner></Spinner>
                     :
-                    <>
-                        <div className="carousel w-4/5 lg:w-3/5 mx-auto my-10 border-2 border-neutral rounded-3xl">
-                            {
-                                slideData.map(slide => <Slide
-                                    key={slide.id}
-                                    slide={slide}
-                                ></Slide>)
-                            }
-                        </div>
-                        <div className='flex justify-center'>
-                            <Link to='/my-reviews' className="btn btn-primary mb-10">Add a Review</Link>
-                        </div>
-                    </>
+                    <div className="carousel w-4/5 lg:w-3/5 mx-auto my-10 border-2 border-neutral rounded-3xl">
+                        {
+                            slideData.map(slide => <Slide
+                                key={slide.id}
+                                slide={slide}
+                            ></Slide>)
+                        }
+                    </div>
             }
         </div>
     );

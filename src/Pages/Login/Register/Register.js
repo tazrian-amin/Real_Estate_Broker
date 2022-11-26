@@ -16,6 +16,7 @@ const Register = () => {
     const handleRegister = event => {
         event.preventDefault();
         const form = event.target;
+        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.confirm.value;
@@ -31,6 +32,7 @@ const Register = () => {
             createUser(email, password)
                 .then(res => {
                     const user = res.user;
+                    user.displayName = name;
                     setAuthToken(user);
                     alert('User Registered Successfully!');
                     form.reset();
@@ -79,7 +81,7 @@ const Register = () => {
                             <input className="btn btn-primary" type="submit" value="Register" />
                         </div>
                     </form>
-                    <p className='text-center'>Already Have an Account? <Link to='/login' className='text-primary font-bold my-5'>Login</Link></p>
+                    <p className='text-center'>Already Have an Account? <Link to='/login' className='text-primary font-bold underline my-5'>Login</Link></p>
                 </div>
             </div>
             <ToastContainer />

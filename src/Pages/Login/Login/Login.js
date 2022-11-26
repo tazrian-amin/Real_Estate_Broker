@@ -58,7 +58,7 @@ const Login = () => {
                         </div>
                     </form>
                     <SocialLogin></SocialLogin>
-                    <p className='text-center'>Don't have an account? <Link to='/register' className='text-primary font-bold my-5'>Register</Link></p>
+                    <p className='text-center'>Don't have an account? <Link to='/register' className='text-primary underline font-bold my-5'>Register</Link></p>
                 </div>
             </div>
             <ToastContainer />

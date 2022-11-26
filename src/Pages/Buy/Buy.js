@@ -6,11 +6,13 @@ import ServiceCard from '../Shared/ServiceCard/ServiceCard';
 const Buy = () => {
     useTitle('Buy');
     const [buy, setBuy] = useState([]);
+
     useEffect(() => {
         fetch('http://localhost:5000/buy')
             .then(res => res.json())
             .then(data => setBuy(data))
     }, [])
+
     return (
         <>
             {

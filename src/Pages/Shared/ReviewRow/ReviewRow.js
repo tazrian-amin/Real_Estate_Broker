@@ -19,8 +19,8 @@ const ReviewRow = ({ review }) => {
                 </div>
             </td>
             <td>
-                <p>{comment.slice(0, 98)}</p>
-                <p>{comment.slice(98, 200)}</p>
+                <p>{comment.slice(0, 102)}</p>
+                <p>{comment.slice(102, 202)}</p>
             </td>
             <td>
                 <div className="rating">

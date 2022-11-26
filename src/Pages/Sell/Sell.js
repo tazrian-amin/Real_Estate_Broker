@@ -48,8 +48,7 @@ const Sell = () => {
                     email,
                     name,
                     phone,
-                    photo: user?.photoURL,
-
+                    photo: user?.photoURL
                 }
             ],
             price,
