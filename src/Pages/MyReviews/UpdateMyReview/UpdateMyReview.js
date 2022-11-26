@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import useTitle from '../../../hooks/useTitle';
 import { showToastMessage } from '../../../utilities/utilities';
 
 const UpdateMyReview = () => {
 
+    useTitle('Update Review');
     const { name, comment, photo, rating, _id } = useLoaderData();
     const navigate = useNavigate();
 
