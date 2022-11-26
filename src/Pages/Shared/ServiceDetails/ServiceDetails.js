@@ -3,9 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useEffect, useState } from 'react';
 import { PhotoSlider } from 'react-photo-view';
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../hooks/useTitle';
 import Spinner from '../../../utilities/Spinner';
+import { showToastMessage } from '../../../utilities/utilities';
 import ReviewSection from './ReviewSection';
 
 const ServiceDetails = () => {
@@ -32,7 +34,6 @@ const ServiceDetails = () => {
         const email = user?.email;
         const photo = user?.photoURL || 'https://img.myloview.com/stickers/user-icon-vector-people-icon-profile-vector-icon-person-illustration-business-user-icon-users-group-symbol-male-user-symbol-700-223068886.jpg';
         const rating = form.rating.value;
-        // console.log(rating, comment, time, name, email, photo);
 
         const addReview = {
             photo,
@@ -55,15 +56,18 @@ const ServiceDetails = () => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-                    alert('Review added successfully!');
+                    showToastMessage('Review added successfully!');
                 }
                 form.reset();
-                navigate('/my-reviews');
+                setTimeout(() => {
+                    navigate('/my-reviews');
+                }, 3000);
             });
     }
 
     return (
         <div>
+            <ToastContainer />
             {/* Service Details Section */}
             <div className="bg-base-100">
                 <h1 className="text-3xl md:text-5xl font-bold text-center my-10">Buy a perfect {category} that suits you</h1>

@@ -70,15 +70,17 @@ const Sell = () => {
                     showToastMessage('Property added successfully!');
                 }
                 form.reset();
-                navigate('/buy');
+                setTimeout(() => {
+                    navigate('/buy');
+                }, 3000);
             })
     }
 
     return (
         <div>
+            <ToastContainer></ToastContainer>
             <h1 className="text-5xl font-bold text-center py-5">Add Your Property</h1>
             <p className='text-center text-lg font-semibold mb-5'>Fill up the form to add your property. <br /> Reach millions of buyers <br />With a single post!</p>
-            <ToastContainer></ToastContainer>
             <form onSubmit={handleSellingHouse} className='bg-base-200 w-full md:w-4/5 px-5 mx-auto rounded-none md:rounded-md border-y-2 md:border-2 border-neutral my-10 py-10'>
                 <h1 className="text-5xl font-bold text-center pb-5">Form</h1>
                 <div className='flex flex-col lg:flex-row items-center justify-evenly my-5'>

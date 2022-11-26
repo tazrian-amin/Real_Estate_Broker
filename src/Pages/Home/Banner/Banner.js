@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Buy || Sell</h1>
-                    <p className="mb-5">Buying or selling a property is a time-consuming process. Let's help you with this.</p>
+                    <p className="mb-5 text-lg font-semibold">Buying or selling a property is a time-consuming process. Let's help you with this.</p>
                     <button className="btn btn-primary"><Link to='/contact'>Contact</Link></button>
                 </div>
             </div>

@@ -35,9 +35,11 @@ const Register = () => {
                     const user = res.user;
                     user.displayName = name;
                     setAuthToken(user);
-                    alert('User Registered Successfully!');
+                    showToastMessage('User Registered Successfully!');
                     form.reset();
-                    navigate(from, { replace: true });
+                    setTimeout(() => {
+                        navigate(from, { replace: true });
+                    }, 3000);
                 })
                 .then(err => {
                     console.error(err);
@@ -48,6 +50,7 @@ const Register = () => {
     }
     return (
         <>
+            <ToastContainer />
             {
                 loading ?
                     <Spinner></Spinner>
@@ -64,25 +67,25 @@ const Register = () => {
                                         <label className="label">
                                             <span className="label-text">Name</span>
                                         </label>
-                                        <input type="text" name='name' placeholder="Your Name" className="input input-bordered" />
+                                        <input type="text" name='name' required placeholder="Your Name" className="input input-bordered" />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="text" name='email' placeholder="Your Email" className="input input-bordered" />
+                                        <input type="text" name='email' required placeholder="Your Email" className="input input-bordered" />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="password" name='password' placeholder="Password" className="input input-bordered" />
+                                        <input type="password" name='password' required placeholder="Password" className="input input-bordered" />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Confirm Password</span>
                                         </label>
-                                        <input type="password" name='confirm' placeholder="Confirm Password" className="input input-bordered" />
+                                        <input type="password" name='confirm' required placeholder="Confirm Password" className="input input-bordered" />
                                     </div>
                                     <div className="form-control mt-6">
                                         <input className="btn btn-primary" type="submit" value="Register" />
@@ -93,7 +96,6 @@ const Register = () => {
                         </div>
                     </div>
             }
-            <ToastContainer />
         </>
     );
 };

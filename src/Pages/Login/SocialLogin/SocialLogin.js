@@ -21,7 +21,7 @@ const SocialLogin = () => {
             })
             .catch(err => {
                 console.error(err);
-                showToastMessage(err.message)
+                showToastMessage(err.message);
             })
     }
 

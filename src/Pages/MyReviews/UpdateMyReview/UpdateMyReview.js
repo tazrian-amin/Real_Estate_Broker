@@ -2,10 +2,12 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import { showToastMessage } from '../../../utilities/utilities';
 
 const UpdateMyReview = () => {
+
     const { name, comment, photo, rating, _id } = useLoaderData();
-    console.log(name, comment, photo, rating, _id);
     const navigate = useNavigate();
 
     const handleUpdate = (event) => {
@@ -37,21 +39,24 @@ const UpdateMyReview = () => {
             .then(data => {
                 console.log(data)
                 if (data.modifiedCount > 0) {
-                    alert('Review updated successfully!');
+                    showToastMessage('Review updated successfully!');
                 }
                 form.reset();
-                navigate('/my-reviews');
+                setTimeout(() => {
+                    navigate('/my-reviews');
+                }, 3000);
             })
             .catch(err => {
                 console.error(err);
-                alert('Could not update!');
+                showToastMessage(err.message);
                 form.reset();
             })
     }
 
     return (
-        <form onSubmit={handleUpdate}>
-            <h3 className="font-bold text-lg mt-5">Update Your Review & Info</h3>
+        <form className='bg-base-100 w-full md:w-4/5 mx-auto rounded-none md:rounded-md border-y-2 md:border-2 border-neutral my-10 p-10' onSubmit={handleUpdate}>
+            <ToastContainer></ToastContainer>
+            <h1 className="text-4xl md:text-5xl font-bold text-center pb-5">Update Your Review & Info</h1>
 
             <label className="input-group input-group-vertical my-5">
                 <span className='flex justify-between'>
@@ -87,7 +92,7 @@ const UpdateMyReview = () => {
 
             <textarea name='comment' defaultValue={comment} className="textarea textarea-bordered w-full" placeholder="Update comment..."></textarea>
 
-            <input className="btn btn-primary" type="submit" value="Update Review" />
+            <input className="btn btn-primary mt-5 w-full" type="submit" value="Update Review" />
         </form>
     );
 };
