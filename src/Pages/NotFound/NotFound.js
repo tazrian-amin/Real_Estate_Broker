@@ -11,7 +11,7 @@ const NotFound = () => {
                     <p className='py-4 text-lg font-semibold'>Back to <Link to='/' className='underline'>Home</Link></p>
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 
