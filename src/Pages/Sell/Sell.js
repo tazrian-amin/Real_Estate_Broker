@@ -57,7 +57,7 @@ const Sell = () => {
             rating: 5,
         }
 
-        fetch('http://localhost:5000/buy', {
+        fetch('https://y-zeta-coral.vercel.app/buy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

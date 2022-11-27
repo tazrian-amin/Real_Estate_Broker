@@ -29,7 +29,7 @@ const UpdateMyReview = () => {
             time
         }
 
-        fetch(`http://localhost:5000/reviews/${_id}`, {
+        fetch(`https://y-zeta-coral.vercel.app/reviews/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

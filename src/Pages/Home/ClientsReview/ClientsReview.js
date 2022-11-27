@@ -7,7 +7,7 @@ const ClientsReview = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/overview-reviews')
+        fetch('https://y-zeta-coral.vercel.app/overview-reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

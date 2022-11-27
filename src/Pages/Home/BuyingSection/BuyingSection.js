@@ -8,7 +8,7 @@ const BuyingSection = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/overview')
+        fetch('https://y-zeta-coral.vercel.app/overview')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

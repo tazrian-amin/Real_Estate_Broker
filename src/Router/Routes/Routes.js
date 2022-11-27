@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             {
                 path: '/buy/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/buy/${params.id}`)
+                loader: ({ params }) => fetch(`https://y-zeta-coral.vercel.app/buy/${params.id}`)
             },
             {
                 path: '/sell',
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
             {
                 path: '/my-reviews/:id',
                 element: <PrivateRoute><UpdateMyReview></UpdateMyReview></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://y-zeta-coral.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/login',

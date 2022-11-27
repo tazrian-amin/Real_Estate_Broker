@@ -9,7 +9,7 @@ const Buy = () => {
     const [buy, setBuy] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/buy')
+        fetch('https://y-zeta-coral.vercel.app/buy')
             .then(res => res.json())
             .then(data => setBuy(data))
     }, [])
