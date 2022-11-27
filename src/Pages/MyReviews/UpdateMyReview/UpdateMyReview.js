@@ -94,7 +94,7 @@ const UpdateMyReview = () => {
 
             <textarea name='comment' defaultValue={comment} className="textarea textarea-bordered w-full" placeholder="Update comment..."></textarea>
 
-            <input className="btn btn-primary mt-5 w-full" type="submit" value="Update Review" />
+            <input className="btn hover:text-zinc-50 bg-zinc-50 text-gray-900 mt-5 w-full" type="submit" value="Update Review" />
         </form>
     );
 };

@@ -10,7 +10,7 @@ const ServiceCard = ({ service }) => {
     const { category, details, img, location, price, _id } = service;
 
     return (
-        <div className="card bg-base-100 shadow-xl m-4">
+        <div className="card bg-zinc-50 text-gray-900 shadow-xl m-4">
             <figure className='cursor-pointer' title='view full size image'>
                 <PhotoProvider>
                     <PhotoView src={img}>
@@ -18,6 +18,7 @@ const ServiceCard = ({ service }) => {
                     </PhotoView>
                 </PhotoProvider>
             </figure>
+
             <div className="card-body">
                 <h2 className="card-title">{category}</h2>
                 <div className="badge badge-secondary">Overview</div>
@@ -25,7 +26,7 @@ const ServiceCard = ({ service }) => {
                 <p className='text-lg font-semibold'><FontAwesomeIcon icon={faDollar} /> Price: ${price}</p>
                 <p className='text-lg font-semibold'><FontAwesomeIcon icon={faMapMarkerAlt} /> Location: {location}</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/buy/${_id}`} className="btn btn-primary">See Details</Link>
+                    <Link to={`/buy/${_id}`} className="btn hover:text-zinc-50 bg-zinc-50 text-gray-900">See Details</Link>
                 </div>
             </div>
         </div>

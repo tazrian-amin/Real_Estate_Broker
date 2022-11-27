@@ -40,8 +40,9 @@ const ClientsReview = () => {
             next: 1
         }
     ];
+
     return (
-        <div className='bg-base-200 w-full md:w-4/5 mx-auto rounded-none md:rounded-md border-y-2 md:border-2 border-neutral my-10'>
+        <div className='bg-gray-900 text-zinc-50 w-full md:w-4/5 mx-auto rounded-none md:rounded-md border-y-2 md:border-2 border-neutral my-10'>
             <h1 className="text-4xl md:text-5xl font-bold text-center pt-5">What Our Clients Say...</h1>
             {
                 reviews.length === 0 ?

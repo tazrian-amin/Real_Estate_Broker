@@ -3,25 +3,29 @@ import logo from '../../../logo.svg';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content border-t-2 border-neutral">
+        <footer className="footer p-10 bg-gray-900 text-zinc-50 border-t-2 border-neutral">
             <div>
                 <Link to='/' className="flex flex-col items-center">
                     <img className='w-12 mx-2 border-2 border-black rounded-full' src={logo} alt="logo" />
                     <span className='text-xl font-bold pt-2'>Your Realtor</span>
                 </Link>
             </div>
+
             <div>
                 <span className="footer-title opacity-100">Services</span>
                 <Link to='/buy' className="link link-hover">Buy House</Link>
                 <Link to='/sell' className="link link-hover">Sell House</Link>
             </div>
+
             <div>
                 <span className="footer-title opacity-100">Company</span>
                 <Link to='/about' className="link link-hover">About us</Link>
                 <Link to='/contact' className="link link-hover">Contact</Link>
                 <Link to='/blog' className="link link-hover">Blog</Link>
             </div>
+
             <div>
                 <span className="footer-title opacity-100">Social</span>
                 <div className="grid grid-flow-col gap-4">

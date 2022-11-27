@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Banner = () => {
+
     return (
-        <div className="hero min-h-screen bg-base-200 w-full mx-auto" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1505843513577-22bb7d21e455?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80")` }}>
+        <div className="hero min-h-screen w-full mx-auto" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1505843513577-22bb7d21e455?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Buy || Sell</h1>
                     <p className="mb-5 text-lg font-semibold">Buying or selling a property is a time-consuming process. Let's help you with this.</p>
-                    <button className="btn btn-primary"><Link to='/contact'>Contact</Link></button>
+                    <button className="btn hover:text-zinc-50 bg-zinc-50 text-gray-900"><Link to='/contact'>Contact</Link></button>
                 </div>
             </div>
         </div>

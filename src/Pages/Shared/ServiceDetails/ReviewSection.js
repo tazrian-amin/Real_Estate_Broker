@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const ReviewSection = ({ review }) => {
+
     const { name, comment, photo, rating } = review;
 
     return (
-        <div className="card md:card-side bg-base-100 shadow-xl border my-5">
+        <div className="card md:card-side bg-gray-900 text-zinc-50 shadow-xl border my-5">
             <img className="mask mask-decagon w-32 ml-5" src={photo} alt="owner" />
+
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
                 <p className='font-semibold'>{comment}</p>

@@ -8,10 +8,11 @@ import Spinner from '../../../utilities/Spinner';
 import { showToastMessage } from '../../../utilities/utilities';
 
 const Register = () => {
+
     useTitle('Register');
     const { createUser, loading, setLoading } = useContext(AuthContext);
-    const location = useLocation();
     const navigate = useNavigate();
+    const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
     const handleRegister = event => {
@@ -41,13 +42,14 @@ const Register = () => {
                         navigate(from, { replace: true });
                     }, 3000);
                 })
-                .then(err => {
+                .catch(err => {
                     console.error(err);
                     showToastMessage(err?.message);
                     setLoading(false);
                 })
         }
     }
+
     return (
         <>
             <ToastContainer />
@@ -60,6 +62,7 @@ const Register = () => {
                             <div className="text-center lg:text-left">
                                 <img className='w-full' src="https://images.unsplash.com/photo-1494475673543-6a6a27143fc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
                             </div>
+
                             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-10">
                                 <h1 className="text-5xl text-center mt-5 font-bold">Register</h1>
                                 <form onSubmit={handleRegister} className="card-body">
@@ -88,7 +91,7 @@ const Register = () => {
                                         <input type="password" name='confirm' required placeholder="Confirm Password" className="input input-bordered" />
                                     </div>
                                     <div className="form-control mt-6">
-                                        <input className="btn btn-primary" type="submit" value="Register" />
+                                        <input className="btn hover:text-zinc-50 bg-zinc-50 text-gray-900" type="submit" value="Register" />
                                     </div>
                                 </form>
                                 <p className='text-center'>Already Have an Account? <Link to='/login' className='text-primary font-bold underline my-5'>Login</Link></p>

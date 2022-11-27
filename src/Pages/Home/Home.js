@@ -6,7 +6,9 @@ import SellingSection from './SellingSection/SellingSection';
 import BuyingSection from './BuyingSection/BuyingSection';
 
 const Home = () => {
+
     useTitle('Home');
+
     return (
         <div>
             <Banner></Banner>

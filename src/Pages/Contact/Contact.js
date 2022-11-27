@@ -8,6 +8,7 @@ const Contact = () => {
 
     useTitle('Contact');
     const navigate = useNavigate();
+
     const handleContact = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -25,6 +26,7 @@ const Contact = () => {
                 <div className="text-center lg:text-left">
                     <img className='w-full' src="https://images.unsplash.com/photo-1534073828943-f801091bb18c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
                 </div>
+
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-10">
                     <h1 className="text-5xl text-center mt-5 font-bold">Contact Us</h1>
                     <form onSubmit={handleContact} className="card-body">
@@ -42,12 +44,12 @@ const Contact = () => {
                         </div>
                         <textarea name='comment' className="textarea textarea-bordered w-full mt-5" required placeholder="Write your message..."></textarea>
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Submit" />
+                            <input className="btn hover:text-zinc-50 bg-zinc-50 text-gray-900" type="submit" value="Submit" />
                         </div>
                     </form>
                 </div>
-                <ToastContainer></ToastContainer>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

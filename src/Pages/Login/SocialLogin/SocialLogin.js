@@ -7,9 +7,9 @@ import { showToastMessage } from '../../../utilities/utilities';
 
 const SocialLogin = () => {
 
-    const { googleSignIn } = useContext(AuthContext);
-    const location = useLocation();
+    const { googleSignIn, setLoading } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
     const handleGoogleSignIn = () => {
@@ -21,7 +21,8 @@ const SocialLogin = () => {
             })
             .catch(err => {
                 console.error(err);
-                showToastMessage(err.message);
+                showToastMessage(err?.message);
+                setLoading(false);
             })
     }
 

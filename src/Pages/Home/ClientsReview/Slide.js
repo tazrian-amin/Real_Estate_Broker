@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const Slide = ({ slide }) => {
+
     const { client, id, prev, next } = slide;
 
     return (
@@ -22,8 +23,8 @@ const Slide = ({ slide }) => {
                 </div>
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href={`#slide${prev}`} className="btn opacity-50 hover:opacity-70 btn-circle">❮</a>
-                <a href={`#slide${next}`} className="btn opacity-50 hover:opacity-70 btn-circle">❯</a>
+                <a href={`#slide${prev}`} className="btn opacity-40 hover:opacity-70 btn-circle">❮</a>
+                <a href={`#slide${next}`} className="btn opacity-40 hover:opacity-70 btn-circle">❯</a>
             </div>
         </div>
     );

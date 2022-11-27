@@ -9,10 +9,11 @@ import { showToastMessage } from '../../../utilities/utilities';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
+
     useTitle('Login');
     const { login, loading, setLoading } = useContext(AuthContext);
-    const location = useLocation();
     const navigate = useNavigate();
+    const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
     const handleLogin = event => {
@@ -34,6 +35,7 @@ const Login = () => {
                 setLoading(false);
             })
     }
+
     return (
         <>
             <ToastContainer />
@@ -46,6 +48,7 @@ const Login = () => {
                             <div className="text-center lg:text-left">
                                 <img className='w-full' src="https://images.unsplash.com/photo-1494475673543-6a6a27143fc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
                             </div>
+
                             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-10">
                                 <h1 className="text-5xl text-center mt-5 font-bold">Login</h1>
                                 <form onSubmit={handleLogin} className="card-body pb-0">
@@ -62,7 +65,7 @@ const Login = () => {
                                         <input type="password" name='password' required placeholder="Password" className="input input-bordered" />
                                     </div>
                                     <div className="form-control mt-6">
-                                        <input className="btn btn-primary" type="submit" value="Login" />
+                                        <input className="btn hover:text-zinc-50 bg-zinc-50 text-gray-900" type="submit" value="Login" />
                                     </div>
                                 </form>
                                 <SocialLogin></SocialLogin>

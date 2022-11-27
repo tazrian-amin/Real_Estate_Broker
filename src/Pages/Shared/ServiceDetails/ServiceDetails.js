@@ -11,10 +11,11 @@ import { showToastMessage } from '../../../utilities/utilities';
 import ReviewSection from './ReviewSection';
 
 const ServiceDetails = () => {
+
     useTitle('Details');
+    const { category, details, img, location, owner, price, rating } = useLoaderData();
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
-    const { category, details, img, location, owner, price, rating } = useLoaderData();
     const [visible, setVisible] = useState(false);
     const [index, setIndex] = useState(0);
     const [reviews, setReviews] = useState([]);
@@ -71,7 +72,6 @@ const ServiceDetails = () => {
             {/* Service Details Section */}
             <div className="bg-base-100">
                 <h1 className="text-3xl md:text-5xl font-bold text-center my-10">Buy a perfect {category} that suits you</h1>
-
                 <div className='flex justify-center'>
                     <img className='w-4/5 mx-auto' src={img} alt="home" />
                 </div>
@@ -92,25 +92,25 @@ const ServiceDetails = () => {
                 />
 
                 <div className="flex flex-col mt-10 w-4/5 mx-auto border-opacity-50 text-center">
-                    <div className="grid card p-4 bg-base-200 rounded-box place-items-center">
-                        <h3 className='text-3xl font-bold pb-2'>{category} Details</h3>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faBed} /> Bed: {details[0].bed}</p>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faBathtub} /> Bath: {details[0].bath}</p>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faPlusCircle} /> Facility: {details[0].facility}</p>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faAreaChart} /> Area: {details[0].area} sqr ft.</p>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faMapMarkerAlt} /> Location: {location}</p>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faDollar} /> Price: ${price}</p>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon className='text-warning' icon={faStar} /> Ratings: {rating}</p>
+                    <div className="grid card p-4 lg:py-10 bg-gray-900 text-zinc-50 rounded-box place-items-center">
+                        <h3 className='text-3xl font-bold mb-5'>{category} Details</h3>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faBed} /> Bed: {details[0].bed}</p>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faBathtub} /> Bath: {details[0].bath}</p>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faPlusCircle} /> Facility: {details[0].facility}</p>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faAreaChart} /> Area: {details[0].area} sqr ft.</p>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faMapMarkerAlt} /> Location: {location}</p>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faDollar} /> Price: ${price}</p>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon className='text-warning' icon={faStar} /> Ratings: {rating}</p>
                     </div>
 
-                    <div className="divider my-10"><button className='btn btn-primary w-100 mx-auto' onClick={() => setVisible(true)} primary='true'>View Gallery</button></div>
+                    <div className="divider my-10"><button className='btn hover:text-zinc-50 bg-zinc-50 text-gray-900 w-100 mx-auto' onClick={() => setVisible(true)} primary='true'>View Gallery</button></div>
 
-                    <div className="grid card p-4 bg-base-200 rounded-box place-items-center">
-                        <h3 className='text-3xl font-bold'>Owner Details</h3>
-                        <img className="mask mask-decagon w-32" src={owner[0].photo || "https://img.myloview.com/stickers/user-icon-vector-people-icon-profile-vector-icon-person-illustration-business-user-icon-users-group-symbol-male-user-symbol-700-223068886.jpg"} alt="owner" />
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faUserAlt} /> Name: {owner[0].name}</p>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faPhone} /> Phone: {owner[0].phone}</p>
-                        <p className='text-md lg:text-lg font-semibold'><FontAwesomeIcon icon={faEnvelope} /> Email: {owner[0].email}</p>
+                    <div className="grid card p-4 lg:py-10 bg-gray-900 text-zinc-50 rounded-box place-items-center">
+                        <h3 className='text-3xl font-bold mb-5'>Owner Details</h3>
+                        <img className="mask mask-decagon w-32 my-5" src={owner[0].photo || "https://img.myloview.com/stickers/user-icon-vector-people-icon-profile-vector-icon-person-illustration-business-user-icon-users-group-symbol-male-user-symbol-700-223068886.jpg"} alt="owner" />
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faUserAlt} /> Name: {owner[0].name}</p>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faPhone} /> Phone: {owner[0].phone}</p>
+                        <p className='text-md py-1 lg:text-lg font-semibold'><FontAwesomeIcon icon={faEnvelope} /> Email: {owner[0].email}</p>
                     </div>
                 </div>
             </div>
@@ -139,7 +139,7 @@ const ServiceDetails = () => {
                 {
                     user?.email ?
                         <div className="card-actions justify-center mt-10">
-                            <label htmlFor="my-modal" className="btn btn-primary">Add a Review</label>
+                            <label htmlFor="my-modal" className="btn hover:text-zinc-50 bg-zinc-50 text-gray-900">Add a Review</label>
                         </div>
                         :
                         <div className="card-actions justify-center mt-10">
@@ -188,7 +188,7 @@ const ServiceDetails = () => {
 
                         <div className="modal-action">
                             <label htmlFor="my-modal">
-                                <input className="btn btn-primary" type="submit" value="Post Review" />
+                                <input className="btn hover:text-zinc-50 bg-zinc-50 text-gray-900" type="submit" value="Post Review" />
                             </label>
                         </div>
                     </div>
