@@ -37,7 +37,6 @@ const MyReviews = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
                     if (data.deletedCount > 0) {
                         showToastMessage('Review deleted successfully!');
                         const remainingReviews = reviews.filter(review => review._id !== id);

@@ -13,7 +13,6 @@ export const setAuthToken = (user) => {
     })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             localStorage.setItem('user-access-token', data.token);
         })
 }
