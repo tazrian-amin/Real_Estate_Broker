@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Website Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Your Realtor
 
-## Available Scripts
+## Live website link
 
-In the project directory, you can run:
+You can find our live website here... [https://learning-platform-server.web.app/](https://learning-platform-server.web.app/)
 
-### `npm start`
+### `Details`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a Single Page Application (SPA) developed using latest technologies. Especially, we followed MERN stack to develop the fundamentals of this SPA. We used MongoDB database for storing our data. Basic CRUD operation was integrated which gave this website life. Moreover, JSON Web Token (JWT) was also used for user authorization. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The website is about a Real Estate Broker who provides people buying and selling services. One can add a selling post, find a home to buy, see details about the house owner, add reviews upon user-login, update or delete his/her review, etc.
 
-### `npm test`
+### Some key points about this website
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- For Client Side, we have used ReactJs.
+- For Server side, we have used Express.
+- Used Firebase and Vercel to deploy our code and host it.
+- We have used Google and Email-password authentication in Login & Sign up forms
+- Additionally, we have used tailwindCSS, daisyUI plugin, React Router, firebase, FontAwesomeIcons and more tools to enhance user experience.
+- Moreover, we have made our website responsive for mobile, tablet & PC users.
 
-### `npm run build`
+### Technologies & Libraries Used in this Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- MongoDB
+- Express
+- React
+- Node.js
+- tailwindcss
+- daisyUI
+- react-photo-view
+- React Router
+- React Toastify
+- FontAwesomeIcons
+- Firebase
+- Vercel 
+- etc.
